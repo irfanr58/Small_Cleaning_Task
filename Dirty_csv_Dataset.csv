@@ -1,0 +1,7 @@
+First Name,LAST name,Email,Signup Date,Amount Paid,Status
+Alice,Smith,alice.smith@example.com;asmith@gmail.com,2025/01/15,"$1,200.00",Active
+bob,johnson,bob.johnson@example,15-02-2025,800,active 
+Charlie,O'Neil,charlie.oneil@example.com,2025.03.01,950.5,Inactive
+David,Brown,david.brown@example.com; d.brown@yahoo.com,"April 5, 2025","1,100.00",ACTIVE
+,Davis,notanemail,2025-05-12,,inactive
+Eve,miller,,06/01/2025,1000,Pending

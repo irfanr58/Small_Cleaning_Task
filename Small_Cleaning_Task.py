@@ -9,7 +9,7 @@ import polars as pl
 import re
 
 
-path = r"C:\Users\irfan\OneDrive\Desktop\Python Projects\Small_Cleaning Task\Dirty_csv_Dataset.csv"
+path = r"C:\Users\irfan\OneDrive\Desktop\Python Projects\Small_Cleaning_Task\Dirty_csv_Dataset.csv"
 
 # Load the CSV directly into a DataFrame
 df = pd.read_csv(path)
@@ -52,7 +52,7 @@ cleaned = (
 
     .with_columns(
         pl.col("signup_date")
-          .str.strptime(pl.Date, fmt="%m/%d/%Y")  # parse your m/d/Y strings into Dates
+          .str.strptime(pl.Date, format="%m/%d/%Y")  # parse your m/d/Y strings into Dates
           .dt.strftime("%F")                      # format back to "YYYY-MM-DD"
           .alias("signup_date")
     )
@@ -65,7 +65,7 @@ df = cleaned.to_pandas()
 # define output folder and file
 final_dir = r"C:\Users\irfan\OneDrive\Desktop\Python Projects\Small_Cleaning Task"
 os.makedirs(final_dir, exist_ok=True)
-final_path = os.path.join(final_dir, "Cleaned_3.xlsx")
+final_path = os.path.join(final_dir, "Cleaned_4.xlsx")
 
 
 with pd.ExcelWriter(final_path, engine="xlsxwriter") as writer:

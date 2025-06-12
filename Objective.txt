@@ -1,0 +1,42 @@
+Objectives:
+
+1) Normalize Column Headers
+
+Convert headers to lowercase with underscores (e.g., First Name → first_name).
+
+2) Clean Name Fields
+
+Capitalize first and last names consistently.
+
+Remove rows where either first or last name is missing.
+
+3) Email Parsing
+
+Split any cell with multiple emails (semicolon-separated) into separate rows (one email per row), keeping other fields duplicated.
+
+Validate email format; drop rows where the email doesn’t contain “@” and a domain.
+
+4) Date Standardization
+
+Convert all signup_date entries to ISO format (YYYY-MM-DD).
+
+Handle mixed formats (e.g., 15-02-2025, April 5, 2025, 06/01/2025).
+
+5) Amount Paid Cleanup
+
+Remove currency symbols and thousand separators.
+
+Convert to numeric type; coerce invalid or missing entries to NaN.
+
+6) Status Harmonization
+
+Trim whitespace and convert statuses to lowercase.
+
+Map values to a fixed set: active, inactive, pending.
+
+7) Final Filtering & Output
+
+Drop any rows with critical missing data (first_name, last_name, email, signup_date).
+
+Save the cleaned dataset to a new sheet named CleanedData within the same workbook.
+
